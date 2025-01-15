@@ -33,7 +33,7 @@ void URLify(string &s, int n) // s is input string and n is input size
 {
     for(int u=0; u < n && n < s.size(); u++) // check char at indices 0...n-1 in s and n stays within size of s
     {
-        if(s[u] == ' ') // char at u in s is a space
+        if(s[u] == ' ') // if char at u in s is a space
         {
             for(int r=1; r <= 2; r++) // repeat twice
             {
