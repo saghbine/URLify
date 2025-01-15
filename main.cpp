@@ -1,9 +1,8 @@
 //
 //  main.cpp
-//  URLify
+//  CTCI 1.3 URLify
 //
 //  Created by daniel saghbine on 12/9/24.
-//  CTCI 1.3 URLify
 
 #include <iostream>
 using namespace std;
@@ -12,19 +11,18 @@ void URLify(string &s, int n);
 
 int main()
 {
-    string str;
-    int num;
-    
     cout<<"problem\n-------\n\tWrite a method to replace all spaces in a string with '%20'. You may assume that the string has sufficient space at the end to hold the additional characters, and that you are given the \"true\" length of the string. (Note: If implementing in Java, please use a character array so that you can perform this operation in place.)\n\n";
     
     cout<<"input\n-----\n\tType: ";
+    string str;
+    int num;
     getline(cin, str);
-    cout<<"\tType above's \"true\" length: ";
+    cout<<"\tType its \"true\" length: ";
     cin>>num;
     
     URLify(str, num);
     
-    cout<<"\noutput\n------\n\t"<<str<<endl<<endl;
+    cout<<"\noutput\n------\n\t\""<<str<<"\"\n\n";
     
     cout<<"solution\n--------\n\tAuxiliary space complexity: O(1); time complexity: O(n^2).\n\n";
     
@@ -33,7 +31,7 @@ int main()
 
 void URLify(string &s, int n) // s is input string and n is input size
 {
-    for(int u=0; u < n && n < s.size(); u++) // check char at indices 0...n-1 in s
+    for(int u=0; u < n && n < s.size(); u++) // check char at indices 0...n-1 in s and n stays within size of s
     {
         if(s[u] == ' ') // char at u in s is a space
         {
